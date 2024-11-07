@@ -1,0 +1,4 @@
+.backImageAbout{
+    background-image: linear-gradient(to right,hsla(283, 77%, 26%, 0.4),hsla(298, 69%, 46%, 0.3),hsla(283, 100%, 19%, 0.4)) url("../../../public/backgrounds/6.jpg") center center no-repeat;
+    background-size: cover;
+}

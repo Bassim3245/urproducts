@@ -1,0 +1,76 @@
+/* Start Project */
+.Project {
+  padding-bottom: 59px;
+  position: relative;
+  background-color: #ececec;
+}
+.Project .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 40px;
+}
+.Project .box {
+  padding: 15px;
+  position: relative;
+  background-color: white;
+
+}
+.Project .box .image {
+  position: relative;
+  overflow: hidden;
+width: 300px;
+}
+.Project .box .image::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255 255 255 / 20%);
+  width: 0;
+  height: 0;
+  opacity: 0;
+  z-index: 2;
+}
+.Project .box .image:hover::before {
+  animation: flashing 0.7s;
+}
+.Project .box img {
+  max-width: 100%;
+  transition: 0.3s;
+}
+.Project .box .overflow-hidden{
+ padding-bottom: 13px;
+}
+.Project .box p{
+  height: 200px;
+  max-height: 100%;
+  padding: 10px;
+  text-overflow: ellipsis
+}
+.Project .displayNameCamera {
+  width: 100%;
+  height: auto !important;
+}
+.Project .displayName {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 16px;
+}
+.Project .box .image:hover img {
+  transform: rotate(5deg) scale(1.1);
+}
+@keyframes flashing {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+}

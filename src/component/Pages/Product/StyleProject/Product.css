@@ -1,0 +1,225 @@
+/* Start Product */
+.Product {
+  padding-top: 50px;
+  padding-bottom: 59px;
+  position: relative;
+  background-color: #ececec;
+}
+.Product .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.Product .box {
+  padding: 15px;
+  position: relative;
+  background-color: white;
+
+}
+.Product .box .image {
+  position: relative;
+  overflow: hidden;
+width: 300px;
+}
+.Product .box .image::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255 255 255 / 20%);
+  width: 0;
+  height: 0;
+  opacity: 0;
+  z-index: 2;
+}
+.Product .box .image:hover::before {
+  animation: flashing 0.7s;
+}
+.Product .box img {
+  max-width: 100%;
+  transition: 0.3s;
+}
+.Product .box .overflow-hidden{
+ padding-bottom: 13px;
+}
+.Product .box p{
+  height: 200px;
+  max-height: 100%;
+  padding: 10px;
+  text-overflow: ellipsis
+}
+.Product .displayNameCamera {
+  width: 100%;
+  height: auto !important;
+}
+.Product .displayName {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 16px;
+}
+.Product .box .image:hover img {
+  transform: rotate(5deg) scale(1.1);
+}
+@keyframes flashing {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+}
+/* End Product */@property --x {
+	syntax: "<number>";
+	inherits: true;
+	initial-value: 0.3;
+}
+
+@property --y {
+	syntax: "<number>";
+	inherits: true;
+	initial-value: 0.1;
+}
+
+/* body {
+	background: #efefef;
+	font: 16px system-ui;
+	color: black;
+	display: flex;
+	height: 100vh;
+	perspective: 1000px;
+} */
+
+.card {
+	--degree: 19deg;
+	--x-range: 2 * (-0.5 + var(--x));
+	--y-range: 2 * (-0.5 + var(--y));
+	width: 350px;
+	position: relative;
+	display: grid;
+	gap: 4px;
+	margin: auto;
+	padding: 8px;
+	background: white;
+	border: 1px solid white;
+	border-radius: 16px;
+	box-shadow: calc(23px * var(--x-range)) calc(23px * var(--y-range)) 20px
+		rgba(0, 0, 0, 0.18);
+	transition: 200ms all;
+	animation: 3s move alternate ease-in-out infinite;
+	&:hover {
+		animation: none;
+		animation-play-state: paused;
+	}
+
+	transform: rotateX(calc(var(--degree) * var(--y-range)))
+		rotateY(calc(-1 * var(--degree) * var(--x-range)));
+
+	img {
+		max-width: 100%;
+		object-fit: cover;
+		border-radius: 8px;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		/* inset: 0; */
+		/* cursor: none; */
+		border-radius: inherit;
+		opacity: 0.5;
+		background-image: radial-gradient(
+			circle at calc(100% * var(--x)) calc(100% * var(--y)),
+			white,
+			transparent
+		);
+	}
+}
+
+@keyframes move {
+	from {
+		--x: 0.2;
+		--y: 0.7;
+	}
+	to {
+		--x: 0.6;
+		--y: 0.1;
+	}
+}
+/* Start Global Rules */
+
+:root {
+    --main-color: #2196f3;
+    --main-color-alt: #1787e0;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --section-background: #ececec;
+}
+
+
+.HomeHr {
+    position: relative;
+    padding-bottom: 10px;
+    padding-top: 30px;
+
+    height: 100%;
+    background-color: rgb(55, 81, 126);
+    width: 100%;
+    min-height: calc(100vh - 30px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 120px;
+
+}
+
+
+.HomeHr .ContainerInfoHr {
+
+    -webkit-box-shadow: inset -13px 12px 0px -4px rgba(0,0,0,1);
+    -moz-box-shadow: inset -13px 12px 0px -4px rgba(0,0,0,1);
+    box-shadow: inset -13px 12px 0px -4px rgba(0,0,0,1);
+    background-color: white;
+    border-radius: 10px;
+    border-width: 0;
+    
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    padding: 0 25px;
+    transition: all 200ms;
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+    left: 0%;
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        left: -100%;
+    }
+
+    to {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+
+
+
+
+
+
+/* End Animation */

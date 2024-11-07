@@ -1,0 +1,52 @@
+/* src/components/JobTableSole.css */
+.job-table-sole {
+    width: 100%;
+    max-width: 1400px; /* حد أقصى للعرض لتقليل الامتداد */
+    margin: 16px auto; /* إضافة هامش من الأعلى والأسفل وتوسيط الجدول أفقيًا */
+    padding: 0 16px; /* حشوة داخلية لجعل الجدول لا يلامس الجوانب */
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+
+  }
+  
+  /* بقية التنسيقات تبقى كما هي */
+  
+  .job-table-sole th,
+  .job-table-sole td {
+    padding: 12px 16px;
+
+  }
+  
+  .job-table-sole th {
+    background-color: #4a90e2; /* أزرق فاتح */
+    color: white;
+    font-weight: bold;
+  }
+  
+  .job-table-sole tr:nth-child(even) {
+    background-color: #e9f3fc; /* لون أزرق خفيف */
+  }
+  
+  .job-table-sole tr:nth-child(odd) {
+    background-color: #fdfdfe; /* لون أبيض مائل */
+  }
+  
+  .job-table-sole tr:hover {
+    background-color: #d1e4f5; /* أزرق باهت للتفاعل */
+  }
+  
+  .job-table-sole td {
+    border-bottom: 1px solid #ddd;
+    color: #333;
+  }
+  
+  .job-table-sole th,
+  .job-table-sole td {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  

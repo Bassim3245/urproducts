@@ -1,0 +1,62 @@
+/* تنسيق حاوية البطاقات */
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* يسمح بتوزيع البطاقات في صفوف متعددة */
+  gap: 16px;
+  /* المسافة بين البطاقات */
+  justify-content: center;
+  /* محاذاة البطاقات في المنتصف */
+}
+
+/* تنسيق بطاقة المنتج */
+.card-product1 {
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #ff6ec4, #7873f5) 1;
+  border-radius: 8px;
+  /* زوايا مستديرة */
+  padding: 16px;
+  /* مساحة داخلية */
+  width: calc(33.33% - 16px);
+  /* عرض البطاقة (3 بطاقات في كل سطر مع مساحة بين البطاقات) */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* ظل خفيف لجعل البطاقة تبدو مرتفعة */
+  text-align: center;
+  /* محاذاة النص في الوسط */
+  box-sizing: border-box;
+  /* التأكد من أن الحشو والإطار يؤخذان في الاعتبار في العرض */
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* تأثير التحويل عند التمرير فوق البطاقة */
+  background-color: white;
+  cursor: pointer;
+
+}
+
+.card-product1:hover {
+  transform: translateY(-5px);
+  /* رفع البطاقة قليلاً عند التمرير */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* زيادة الظل عند التمرير */
+}
+
+/* تنسيق الصورة داخل البطاقة */
+.card-product1 img {
+  max-width: 100%;
+  /* تأكد من ملاءمة الصورة داخل البطاقة */
+  height: 60%;
+  /* الحفاظ على نسبة العرض إلى الارتفاع */
+  border-radius: 4px;
+  /* زوايا مستديرة للصورة */
+  margin-bottom: 12px;
+  /* إضافة مساحة بين الصورة ونص البطاقة */
+}
+
+/* تنسيق عنوان المنتج */
+.card-product1 h2 {
+  font-size: 1.5em;
+  /* زيادة حجم الخط */
+  margin: 8px 0;
+  /* مساحة فوق وتحت العنوان */
+  color: #2e8cf7;
+  /* لون العنوان */
+}

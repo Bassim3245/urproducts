@@ -1,0 +1,106 @@
+{
+  "header": {
+    "Home": "Home",
+    "About": "About",
+    "Services": "Services",
+    "OurEvent": " Our Event",
+    "OurProject": "Our Project",
+    "product": "Product",
+    "Contact": "Contact",
+    "Oursolution":"Our Solutions",
+    "SendaMassage": " Send a Massage ",
+    "OurLink": " Our Link ",
+    "OurClinents": " Our Clients ",
+    "Week": "Latest News",
+    "CompletedWorks": "Completed Works "
+
+  },
+  "Home": {
+    "title": "WELCOME TO UR PRODUCTS",
+    "subTitle": "We are one of the formations of the iraqi ministry of industry and minerals. We work on manufacturing and assembling many electronic products in cooperation with reputable inter national companies.",
+    "GetStarted": "Get Started",
+    "OurProject": "Our Project"
+  },
+  "About": {
+    "title": " About us",
+    "subTitle": "About Ur Product",
+    "text1": "UR it is the trademark of the products of the General Company for Electronic Systems, which is the formations of the Iraqi Ministry of Industry.",
+    "subTitle2": "Our Vision",
+    "text2": "In the next years, we are working with a strong will to build an industrial institution that covers the needs of the public and private sectors and encourages the national product.",
+    "subTitle3": "Our Massage",
+    "text3": "Creating a professional work environment that attracts competencies that spreads the spirit of belonging to the company in the hearts of employees.",
+    "subTitle4": "Our Mission",
+    "text4": "Raising Iraqi electronic industries by building customer trust in local products, relying on Iraqi competencies to meet the needs of both public and private sectors.",
+    "btnRedMore": "Read More"
+  },
+  "Services": {
+    "title": "Services",
+    "Maintenance": "Maintenance",
+    "MaintenanceText": "We have a full staff with complete devices and equipment that work to rehabilitate idle devices.",
+    "Installation": "Installation",
+    "InstallationText": "We have staff working on installing and programming the electronic devices of our products.",
+    "Supplying": "Supplying",
+    "SupplyingText": "Our products work on supplying electronic materials and devices such as surveillance cameras of all kinds, alarm and firefighting systems, as well as solar energy devices and systems and tablets."
+  },
+  "Contact": {
+    "title": "Contact",
+    "Address": "Our Address",
+    "AddressText": " Iraq , Baghdad , Karadda/alsina'a street",
+    "Email": "Email Us",
+    "EmailText": "info@urproducts.iq",
+    "CallUs": "Call Us",
+    "Phone1": "+ 9647800009498",
+    "Phone2": "+ 9647700009498"
+  },
+
+  "Oursolution": {
+    "title": "Our Solutions"
+    
+  },
+
+  "WorkShop": {
+    "title1": "Maintenance workshop",
+    "title2": "Production workshop",
+    "title3": "Examination workshop",
+    "title4": "Convection oven for checking products"
+  },
+  "project": {
+    "title": "Our Project"
+  },
+  "Event": {
+    "title": "Our Event",
+    "visits": "Visits",
+    "exhibits": "exhibits",
+    "WorkShop" :"Training"
+
+  },
+  "Product": {
+    "title": "Our Product"
+  },
+  "footer": {
+      "title": "UR PRODUCT",
+      "address": "Iraq, Baghdad, Karadda/alsina'a street",
+      "contact": {
+        "phone": "Phone: +9647800009498",
+        "phone2": "Phone: +9647700009498",
+        "phone3": " Speed Dial: 5959",
+        "email": "Email: info@urproducts.iq"
+      },
+      "usefulLinks": {
+        "title": "Useful Links",
+        "links": {
+          "home": "Home",
+          "about": "About us",
+          "services": "Services",
+          "terms": "Terms of service",
+          "privacy": "Privacy policy"
+     }
+}
+},
+
+"job": {
+    "work": " Work",
+    "Theinstitution": "The institution"
+    
+    }
+}

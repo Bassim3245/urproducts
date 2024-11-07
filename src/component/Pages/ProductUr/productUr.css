@@ -1,0 +1,42 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 20px; /* Adds space between cards */
+  margin-top: 20px;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+/* For responsiveness: Adjust the grid layout for smaller screens */
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 2fr; /* 1 card per row on small screens */
+    justify-items: center; /* Center the cards in the grid */
+  }
+
+  .product-card {
+    width: 100%; /* Set a max width for better appearance on small screens */
+    height: auto;
+  }
+}
+
+
+

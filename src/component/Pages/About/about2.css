@@ -1,0 +1,87 @@
+.card-wrapper {
+  display: flex;
+  justify-content: center; /* Center cards horizontally */
+  flex-wrap: wrap; /* Allows cards to wrap to the next line if the screen is smaller */
+  gap: 20px; /* Adds consistent spacing between cards */
+  margin-top: 20px; /* Adds space above the card section */
+}
+
+.custom-container {
+  border: 1px solid rgba(29, 29, 39, 0.4);
+  padding: 15px;
+  border-radius: 8px;
+  background-color:rgba(29, 29, 39, 0.4); /* Set background to transparent if desired */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: calc(25% - 15px); /* Set width to 25% of the container minus half the gap */
+  height: 200px; /* Fixed height for each card */
+  margin-bottom: 20px; /* Space below each card */
+  text-align: center; /* Center-aligns content inside the card */
+}
+
+.custom-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.custom-content {
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+/* .custom-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px; 
+  object-fit: cover;
+  border: 2px solid #ddd;
+} */
+
+.custom-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px; /* Space below the title */
+  color: white;
+}
+
+.custom-text p {
+  font-size: 1rem;
+  color: white;
+}
+
+/* Media Query for smaller screens */
+
+
+@media (max-width: 1200px) {
+  .custom-container {
+    width: 100%; /* Full width for mobile devices */
+    height: 120px; /* Let the height be dynamic */
+  }
+
+  .custom-image {
+    width: 80px;
+    height: 80px; /* Reduce the image size on smaller screens */
+  }
+
+  .custom-text h3 {
+    font-size: 1.2rem; /* Adjust the font size for smaller screens */
+  }
+
+  .custom-text p {
+    font-size: 0.9rem; /* Adjust the font size for smaller screens */
+  }
+}
+
+
+.swiper-button-next {
+  right: 20px; /* تعديل الموقع من اليمين */
+  top: 50%; /* وضع السهم في منتصف الشرائح عموديًا */
+  transform: translateX(-40%); /* لضبط المحاذاة العمودية */
+}
+
+.swiper-button-prev {
+  left: 20px; /* تعديل الموقع من اليسار */
+  top: 50%; /* وضع السهم في منتصف الشرائح عموديًا */
+  transform: translateX(40%); /* لضبط المحاذاة العمودية */
+}

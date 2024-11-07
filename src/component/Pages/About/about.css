@@ -1,0 +1,259 @@
+
+  .about {
+    padding-bottom: 20px;
+  }
+  
+  .about .content .who-we-are {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+  }
+  
+  .about .content h3 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .about .content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about .content ul li {
+    padding-bottom: 10px;
+  }
+  
+  .about .content ul i {
+    font-size: 1.25rem;
+    margin-right: 4px;
+    color: var(--accent-color);
+  }
+  
+  .about .content p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .about .content .read-more {
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    font-family: var(--heading-font);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 12px 24px;
+    border-radius: 5px;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .about .content .read-more i {
+    font-size: 18px;
+    margin-left: 5px;
+    line-height: 0;
+    transition: 0.3s;
+  }
+  
+  .about .content .read-more:hover {
+    background: color-mix(in srgb, var(--accent-color), transparent 20%);
+    padding-right: 19px;
+  }
+  
+  .about .content .read-more:hover i {
+    margin-left: 10px;
+  }
+  
+  .about .about-images {
+    text-align: left; /* يحاذي محتوى العنصر إلى اليسار */
+    float: left; /* يجعل العنصر يتدفق إلى اليسار */
+    margin-right: 10px; /* مسافة بين الصورة والمحتوى */
+  }
+  
+  
+  :root {
+    --background-color: #ffffff;
+  
+    --default-color: #3d4348;
+  
+    --heading-color: #3e5055;
+  
+    --accent-color: transform;
+  
+    --contrast-color: #ffffff;
+  }
+  
+
+  :root {
+    scroll-behavior: smooth;
+  }
+  
+  /*--------------------------------------------------------------
+  # General
+  --------------------------------------------------------------*/
+  
+  a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    color: color-mix(in srgb, var(--accent-color), transparent 25%);
+    text-decoration: none;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--heading-color);
+  }
+  
+  .scroll-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: -15px;
+    z-index: 99999;
+    background-color: var(--accent-color);
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    transition: all 0.4s;
+  }
+  
+  .scroll-top i {
+    font-size: 24px;
+    color: var(--contrast-color);
+    line-height: 0;
+  }
+  
+  .scroll-top:hover {
+    background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+    color: var(--contrast-color);
+  }
+  
+  .scroll-top.active {
+    visibility: visible;
+    opacity: 1;
+    bottom: 15px;
+  }
+  
+  /*--------------------------------------------------------------
+  # Disable aos animation delay on mobile devices
+  --------------------------------------------------------------*/
+  @media screen and (max-width: 768px) {
+    [data-aos-delay] {
+      transition-delay: 0 !important;
+    }
+  }
+  
+  /*--------------------------------------------------------------
+  # Global Page Titles & Breadcrumbs
+  --------------------------------------------------------------*/
+  .page-title {
+    --background-color: color-mix(in srgb, var(--default-color), transparent 96%);
+    color: var(--default-color);
+    background-color: var(--background-color);
+    padding: 25px 0;
+    position: relative;
+  }
+  
+  .page-title h1 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .page-title .breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .page-title .breadcrumbs ol li+li {
+    padding-left: 10px;
+  }
+  
+  .page-title .breadcrumbs ol li+li::before {
+    content: "/";
+    display: inline-block;
+    padding-right: 10px;
+    color: color-mix(in srgb, var(--default-color), transparent 70%);
+  }
+  
+  /*--------------------------------------------------------------
+  # Global Sections
+  --------------------------------------------------------------*/
+  section 
+  .section {
+    color: var(--default-color);
+    /* background-color: var(--background-color); */
+    padding: 60px 0;
+    scroll-margin-top: 100px;
+    overflow: clip;
+  }
+  
+  @media (max-width: 1199px) {
+  
+    section,
+    .section {
+      scroll-margin-top: 66px;
+    }
+  }
+  
+  /*--------------------------------------------------------------
+  # Global Section Titles
+  --------------------------------------------------------------*/
+  .section-title {
+    text-align: center;
+    padding-bottom: 6px;
+    position: relative;
+  }
+  
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    margin-top: 100px;
+  }
+  
+  .section-title h2:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  
+  .section-title p {
+    margin-bottom: 0;
+  }
+
+  .section-title a {
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hi{
+
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+  
