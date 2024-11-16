@@ -1,10 +1,18 @@
-.custom-container6 {
+.carousel-container {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     position: relative;
+    overflow: hidden;
+    margin: 0 10px;
+    padding: 0 40px; /* Space for arrows */
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    gap: 20px;
     width: 100%;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: center; /* Center the items in the container */
 }
 
 .custom-card {
@@ -12,50 +20,25 @@
     flex-direction: column;
     border-radius: 0.5rem;
     background-color: white;
-    border-image: linear-gradient(0deg, #ff6ec4, #7873f5);
     box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
     overflow: hidden;
     position: relative;
     height: 450px;
-    width:400px;
-    margin: 10px; /* Add space between cards */
+    width: 400px;
     cursor: pointer;
-    flex: 1 0 30%; /* Allow three cards in a row with flexibility */
-    box-sizing: border-box; /* Ensure padding and border are included in width */
+    flex: 0 0 auto;
 }
 
 .custom-card-image {
     height: 300px;
     width: 100%;
     object-fit: cover;
-    border-radius: 0;
-    margin-right: 0;
 }
 
 .custom-card-content {
     padding: 1.5rem;
     flex-grow: 1;
-    margin-bottom: 3rem; /* Added space between content and button */
-}
-
-.custom-action-button {
-    position: absolute; /* Position the button relative to the card */
-    bottom: 1.5rem; /* Set how far from the bottom */
-    right: 1.5rem; /* Adjust left positioning */
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: white;
-    background-color: #3182ce;
-    border: none;
-    border-radius: 0.375rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.custom-action-button:hover {
-    background-color: #2b6cb0;
+    position: relative;
 }
 
 .custom-card-title {
@@ -65,58 +48,103 @@
     color: #2d3748;
 }
 
-/* Optional: Adjust styles for smaller screens */
-@media (max-width: 768px) {
-    .custom-card {
-        flex: 1 0 45%; /* Allow two cards per row on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .custom-card {
-        flex: 1 0 100%; /* Allow one card per row on mobile devices */
-    }
-}
-.carousel-container {
+.arrow {
+    background: #2E8CF7;
+    border: none;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 10%;
+    font-size: 1.5rem;
+    transition: background-color 0.3s;
+    position: absolute;
+    z-index: 2;
+    height: 40px;
+    width: 40px;
     display: flex;
     align-items: center;
-    position: relative;
-    overflow: hidden; /* Hide overflow for scroll effect */
-    margin: 0 10px; /* Add margin to the container */
-}
-
-.scroll-container {
-    display: flex;
-    overflow-x: hidden; /* Hide overflow on the x-axis */
-    scroll-behavior: smooth; /* Smooth scroll */
-    gap: 10px; /* Space between cards */
-}
-
-.custom-card {
-    flex: 0 0 30%; /* Set card width to 30% to fit 3 in the view */
-    margin: 0 5px; /* Add margin between cards */
-}
-
-.arrow {
-    background:#2E8CF7;
-    border: none;
-    color: white; /* Button text color */
-    padding: 8px; /* Button padding */
-    cursor: pointer;
-    border-radius: 10%; /* Rounded corners */
-    font-size: 1.5rem; /* Button text size */
-    transition: background-color 0.3s;
-    z-index: 1; /* Make sure arrows are above other elements */
+    justify-content: center;
 }
 
 .arrow:hover {
-    background-color: #1a6db6; /* Darker shade on hover */
+    background-color: #1a6db6;
 }
 
 .arrow.left {
-    margin-right: 5px; /* Space between left arrow and cards */
+    left: 0;
 }
 
 .arrow.right {
-    margin-left: 5px; /* Space between right arrow and cards */
+    right: 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .carousel-container {
+        padding: 0 35px; /* Reduced padding for mobile */
+    }
+
+    .scroll-container {
+        gap: 0;
+    }
+
+    .custom-card {
+        width: 100%; /* Take full width of container */
+        height: 400px; /* Slightly reduced height for mobile */
+        margin: 0 auto; /* Center the card */
+        flex: 0 0 100%; /* Force single card width */
+    }
+
+    .custom-card-image {
+        height: 250px; /* Slightly reduced image height for mobile */
+    }
+
+    /* Hide all cards except the one being viewed */
+    .scroll-container {
+        -webkit-mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 0%,
+            black 100%,
+            transparent 100%
+        );
+        mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 0%,
+            black 100%,
+            transparent 100%
+        );
+    }
+
+    .arrow {
+        width: 35px; /* Smaller arrows on mobile */
+        height: 35px;
+        padding: 6px;
+    }
+}
+
+/* Smaller mobile devices */
+@media (max-width: 480px) {
+    .custom-card {
+        height: 380px;
+    }
+
+    .custom-card-image {
+        height: 200px;
+    }
+
+    .carousel-container {
+        padding: 0 30px;
+    }
+}
+
+/* Hide scrollbar */
+.scroll-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
 }

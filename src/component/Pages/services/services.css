@@ -1,80 +1,106 @@
+/* تصميم العرض الأساسي */
 .services-grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-    gap: 30px; /* Increase space between grid items */
-  padding: 16px; /* Add padding around the grid */
-
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 30px;
+  padding: 16px;
 }
 
 .services-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.5rem; /* Slightly increase padding */
-  background-color: white; /* Equivalent to bg-white */
-  border: 0.5px solid rgb(189, 188, 188); /* Default gray border */
-  border-radius: 0.5rem; /* Equivalent to rounded */
+  padding: 1.5rem;
+  background-color: white;
+  border: 0.5px solid rgb(189, 188, 188);
+  border-radius: 0.5rem;
   transition: box-shadow 0.2s;
   height: 250px;
   width: 450px;
   border: 2px solid;
-  border-image: linear-gradient(45deg, #ff6ec4,#7873f5) 1;
-  position: relative; /* Set relative positioning for the card */
+  border-image: linear-gradient(45deg, #ff6ec4, #7873f5) 1;
+  position: relative;
   margin-right: 20px;
-
-
-  
 }
 
+/* تأثير hover */
 .services-card:hover {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Decrease hover shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* محتوى البطاقة */
 .services-image-container {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  margin-bottom: 1rem; /* Add space between image and title */
-  width: 100%; /* Make the container fill the card width */
-  height: 100px; /* Adjust as needed for your design */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 100px;
 }
 
 .services-image {
-  width: 50px; /* Set max width for the image */
-  height: 60px; /* Set max height for the image */
-  object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+  width: 50px;
+  height: 60px;
+  object-fit: cover;
 }
-
 
 .services-card-title {
   height: 50px;
-  margin-top: 20px; /* Reset margin if needed */
-  margin-bottom: 0.5rem; /* Add space between title and underline */
-  font-size: 20px; /* Increase title size */
-  flex-grow: 1; /* Pushes the text down to maintain even space across cards */
-
-
+  margin-top: 20px;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+  flex-grow: 1;
 }
 
 .services-underline {
   width: 100%;
-  height: 0.25rem; /* Adjust as necessary */
-  /*background-color: #4c51bf; /* Your underline color */
-  background-image:linear-gradient(45deg, #ff6ec4,#7873f5) ;
+  height: 0.25rem;
+  background-image: linear-gradient(45deg, #ff6ec4, #7873f5);
   transition: transform 0.3s;
-  transform: scaleX(0); /* Hide by default */
+  transform: scaleX(0);
 }
 
 .services-card:hover .services-underline {
-  transform: scaleX(1); /* Show on hover */
+  transform: scaleX(1);
 }
 
-/* Additional styles for text direction */
+/* اتجاه النص */
 .text-left {
-  text-align: left; /* Left align for English */
-  direction: ltr; /* Left to right */
+  text-align: left;
+  direction: ltr;
 }
 
 .text-right {
-  text-align: right; /* Right align for Arabic */
-  direction: rtl; /* Right to left */
+  text-align: right;
+  direction: rtl;
+}
+
+/* تصميم مخصص لشاشات الموبايل */
+@media (max-width: 768px) {
+  .services-grid-container {
+    grid-template-columns: 1fr; /* عرض بطاقة واحدة فقط */
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .services-card {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+  }
+}
+
+/* تصميم مخصص لشاشات الآيباد */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .services-grid-container {
+    grid-template-columns: repeat(2, 1fr); /* عرض بطاقتين في الصف */
+    gap: 25px; /* مسافة بين البطاقات */
+    padding: 16px;
+  }
+
+  .services-card {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+  }
 }
