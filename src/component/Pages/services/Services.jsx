@@ -13,7 +13,7 @@ function Services() {
 
   const fetchServiceData = async () => {
     try {
-      const response = await axios.get(`${BackendUrl}Services/`);
+      const response = await axios.get(`${BackendUrl}/Services/`);
       setServices(response.data);
     } catch (error) {
       console.error('Error fetching service data:', error);

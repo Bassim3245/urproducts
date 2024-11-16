@@ -1,8 +1,10 @@
 /* تصميم العرض الأساسي */
 .services-grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
+  gap: 20px;
   padding: 16px;
 }
 
